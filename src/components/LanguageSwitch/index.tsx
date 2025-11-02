@@ -24,6 +24,14 @@ export const useLanguageItems = () => {
           location.reload();
         },
       },
+      {
+        label: '한국어',
+        key: Language.KO,
+        onClick() {
+          setLanguage?.(Language.KO);
+          location.reload();
+        },
+      },
     ];
   }, []);
 };

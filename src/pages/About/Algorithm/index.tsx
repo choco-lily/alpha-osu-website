@@ -2,6 +2,7 @@ import { useCookieLanguage } from '../../../hooks/useCookieLanguage';
 import { Language } from '../../../i18n';
 import { AboutEn } from './en';
 import { AboutCn } from './cn';
+import { AboutKo } from './ko';
 import { Container } from './styles';
 
 export const Algorithm = () => {
@@ -12,7 +13,9 @@ export const Algorithm = () => {
       {
         language === Language.ZH
           ? <AboutCn />
-          : <AboutEn />
+          : language === Language.KO
+            ? <AboutKo />
+            : <AboutEn />
       }
     </Container>
   );

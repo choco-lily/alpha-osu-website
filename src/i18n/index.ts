@@ -8,6 +8,7 @@ import type { I18nKeys } from './locales/keys';
 export enum Language {
   EN = 'en',
   ZH = 'zh',
+  KO = 'ko',
 }
 
 export const DEFAULT_LANGUAGE = 'zh';

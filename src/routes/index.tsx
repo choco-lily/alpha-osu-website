@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zh from 'antd/lib/locale/zh_CN';
 import en from 'antd/lib/locale/en_US';
+import ko from 'antd/lib/locale/ko_KR';
 import { Locale } from 'antd/lib/locale';
 import { useCookieLanguage } from '../hooks/useCookieLanguage';
 import { Recommend } from '../pages/Recommend';
@@ -22,7 +23,9 @@ export const Routes = () => {
     setLocale(
       language === Language.ZH
         ? zh
-        : en,
+        : language === Language.KO
+          ? ko
+          : en,
     );
   }, [language]);
 
